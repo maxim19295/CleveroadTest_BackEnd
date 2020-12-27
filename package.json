@@ -17,8 +17,14 @@
   },
   "homepage": "https://github.com/maxim19295/CleveroadTest_BackEnd#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-validator": "^6.8.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
     "mysql2": "^2.2.5"
   }
 }
