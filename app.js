@@ -96,11 +96,11 @@ app.post('/api/register',
 })
 app.get('/api/me',(req,res)=>{
     try{
-        const token = req.headers['Authorization'];
+        const token = req.headers['authorization'];
     if(!token){
         return res.status(401).json({message: 'Unauthorized (undefined token)'})
     }
-    const email = jwt.verify(token,'ExamplePrivateKey');
+    const {email} = jwt.verify(token,'ExamplePrivateKey');
     const query = `SELECT * FROM users WHERE email='${email}'`;
     conn.query(query,(err,result)=>{
         if(result.length>0){
